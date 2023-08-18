@@ -1,0 +1,7 @@
+qt5ct: using qt5ct plugin
+[INFO  - 2021-02-25T20:54:11.529Z] GhostDriver - Main - running on port 48995
+[INFO  - 2021-02-25T20:54:11.785Z] Session [9cbf0750-77ab-11eb-8739-bf4df6d46e0f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/602.1 (KHTML, like Gecko) PhantomJS/2.1.1 Version/9.0 Safari/602.1"}
+[INFO  - 2021-02-25T20:54:11.785Z] Session [9cbf0750-77ab-11eb-8739-bf4df6d46e0f] - page.customHeaders:  - {}
+[INFO  - 2021-02-25T20:54:11.785Z] Session [9cbf0750-77ab-11eb-8739-bf4df6d46e0f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2021-02-25T20:54:11.786Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9cbf0750-77ab-11eb-8739-bf4df6d46e0f
+[ERROR - 2021-02-25T20:54:11.810Z] RouterReqHand - _handle.error - {"line":40,"column":28}

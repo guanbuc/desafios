@@ -1,0 +1,34 @@
+Fundo
+Informações gerais sobre os dados estão aqui https://www.jodidata.org/gas/database/data-downloads-beta.aspx e uma descrição detalhada do conjunto de dados aqui https://www.jodidata.org/_resources/files/ downloads / manuais / jodi-gas-manual.pdf
+As informações gerais sobre a série temporal estão aqui https://en.wikipedia.org/wiki/Time_series
+Tarefa
+O objetivo é criar um único arquivo python2 / 3 que use apenas bibliotecas padrão que:
+
+Usa apenas o URL https://www.jodidata.org/_resources/files/downloads/gas-data/jodi_gas_csv_beta.zip como entrada
+Downloads, descompactação e análise com base nessa única entrada de URL
+Grava em stdout uma nova representação JSON série a série delimitada (\ n) do CSV de entrada
+Cada representação da série JSON deve ser um objeto com 3 chaves:
+
+series_id: some unique series id; deve ser significativo para a série que está identificando
+points: uma matriz de matrizes de data (hora) / flutuante; a data (hora) deve estar no formato ISO conforme definido em https://en.wikipedia.org/wiki/ISO_8601
+campos: um objeto de qualquer metadado adicional disponível na fonte que ajuda a descrever e identificar os dados; uma série que representa o PIB brasileiro pode ter duas chaves principais: "país" e "conceito" como no exemplo abaixo
+Abaixo está um exemplo de uma única série JSON (com novas linhas apenas para legibilidade; esses dados não estão relacionados aos dados da tarefa acima - eles apenas mostram a estrutura):
+
+{
+    "series_id": "my-data \\ brazil \\ GDP",
+    "pontos":[
+      ["2016-01-01", 12.3],
+      ["2017-01-01", 12.7],
+      ["01/01/2018", 13,1]
+    ],
+    "Campos":{
+      "país": "Brasil",
+      "conceito": "Produto Interno Bruto",
+      "unidades": "USD, milhões",
+      "fonte": "FMI"
+    }
+}
+O script python deve gerar uma série por linha e cada linha deve ser um JSON válido (como acima).
+Abrir no Google Tradutor	
+Feedback
+

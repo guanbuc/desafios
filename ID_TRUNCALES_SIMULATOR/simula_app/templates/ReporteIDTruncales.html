@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simulación modify</title>
+    <a href="/index" style="width:60px;height:60px;font-size:20px"> Alta </a>
+    <a href="/modificacion" style="width:60px;height:60px;font-size:20px"> Modificación </a>
+</head>
+<body>
+{% block content %}
+
+<form method="GET" action="/modif">
+    {{ form.csrf_token }}
+    {{ form.SI_ID_TRONCAL.label }} {{ form.SI_ID_TRONCAL(size=20) }} </p>
+    <input type="submit" value="Buscar">
+</form>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simulación alta</title>
+    <a href="/index" style="width:60px;height:60px;font-size:20px"> Alta </a>
+    <a href="/modificacion" style="width:60px;height:60px;font-size:20px"> Modificación </a>
+</head>
+<body>
+{% block content %}
+
+<form method="GET" action="/alta">
+    {{ form.csrf_token }}
+    {{ form.EQUIPO_A.label }} {{ form.EQUIPO_A(size=20) }} </p>
+    {{ form.PORTA_A.label }} {{ form.PORT_A(size=20) }} </p>
+    {{ form.EQUIPO_Z.label }} {{ form.EQUIPO_Z(size=20) }} </p>
+    {{ form.PORTA_Z.label }} {{ form.PORTA_Z(size=20) }} </p>
+    {{ form.SI_ID }} </p>
+    <input type="submit" value="Generar">
+</form>
+{% endblock %}
+</body>
+</html>

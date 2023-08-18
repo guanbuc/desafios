@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambiar SIID</title>
+</head>
+{% extends "ReportIDTruncales.html %}
+{% block content %}
+<body onload="MyFunction()">
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ conten }} </p>
+    {{ form.BAJA(class="button-control", value="baja") }} </p>
+    {{ form.CAMBIO(class="button-control", value="cambio") }} </p>
+    {{ form.DATOS }}
+</form>
+{% endblock %}
+</body>
+</html>

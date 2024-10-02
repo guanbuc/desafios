@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block conteudo %}
+<h2 style="text-align: center;">LISTA DE CLIENTES</h2>
+	<hr>
+<form method="GET" action="{{url_for('principal')}}">
+	<ul class="list-group">
+		{% for cliente in result %}
+			<ul class="list-group">
+				<li class="list-group-item">{{cliente.cliente}}</li>
+				<li class="list-group-item">{{cliente.projeto}}</li>
+				<li class="list-group-item">{{cliente.Descricao}}</li>
+				<li class="list-group-item">{{cliente.DataInicio}}</li>
+				<li class="list-group-item">{{cliente.DataFim}}</li>
+				<hr>
+			</ul>
+		{% endfor %}
+	</ul>
+</form>
+{% endblock conteudo %}

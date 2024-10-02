@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+{% block conteudo %}
+<h2 style="text-align: center;">Getão de projetos</h2>
+<hr>
+{% for registro in registros %}
+<!--details>
+<summary>{{registro.aluno}}</summary>
+<p>{{registro.nota}}</p>
+</details-->
+
+	<p>
+	  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_{{registro.cliente}}" role="button" aria-expanded="true" aria-controls="collapseExample_{{registro.cliente}}">
+	    {{registro.cliente}}
+	  </a>
+	</p>
+	<div class="collapse show" id="collapseExample_{{registro.projeto}}">
+	  <div class="card card-body">
+	    {{registro.projeto}}
+	  </div>
+	</div>
+	<div class="collapse show" id="collapseExample_{{registro.descricao}}">
+	  <div class="card card-body">
+	    {{registro.descricao}}
+	  </div>
+	</div>
+	<div class="collapse show" id="collapseExample_{{registro.dtinicio}}">
+	  <div class="card card-body">
+	    {{registro.dtinicio}}
+	  </div>
+	</div>
+	<div class="collapse show" id="collapseExample_{{registro.dtfim}}">
+	  <div class="card card-body">
+	    {{registro.dtfim}}
+	  </div>
+	</div>
+	
+{% endfor %}
+
+<form action="{{url_for('cadastro')}}" method="POST">
+	<div class="form-group">
+		<label>Cliente</label>
+		<input type="text" name="cliente" class="form-control" placeholder="digite o nome do cliente" required>
+	</div>
+	<div class="form-group">
+		<label>Projeto</label>
+		<input type="text" name="projeto" class="form-control" placeholder="digite o nome do projeto" required>
+	</div>
+	<div class="form-group">
+		<label>Descrição</label>
+		<input type="text" name="descricao" class="form-control" placeholder="Descreva o projeto" required>
+	</div>
+	<div class="row">
+    <div class="col">
+      <label>Inicio</label>
+      <input type="text" name="dtinicio" class="form-control" placeholder="DD/MM/AAAA">
+    </div>
+    <div class="col">
+      <label>Fim</label>
+      <input type="text" name="dtfim" class="form-control" placeholder="DD/MM/AAAA">
+    </div>
+  </div>
+<button class="btn btn-success">Adicionar</button>
+</form>
+{% endblock conteudo %}
